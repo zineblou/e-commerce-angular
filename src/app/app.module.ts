@@ -10,8 +10,10 @@ import { CategoryComponent } from './components/category/category.component';
 import { CatgoryServiceService } from './services/catgory-service.service';
 import { Route, RouterModule } from '@angular/router';
 import { Category } from './common/category';
+import { SearchComponent } from './components/search/search.component';
 
 const routes:Route[] = [
+{path: 'search/:keyword', component: ProductListComponent},
 {path: 'category/:id', component: ProductListComponent},
 {path: 'category', component: ProductListComponent},
 {path: 'products', component: ProductListComponent},
@@ -24,7 +26,8 @@ const routes:Route[] = [
   declarations: [
     AppComponent,
     ProductListComponent,
-    CategoryComponent
+    CategoryComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
