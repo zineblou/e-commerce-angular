@@ -38,6 +38,8 @@ export class ProductListComponent implements OnInit {
       }
       this.productService.getProductList(this.currentCategoryId).subscribe(
         data => {
+          //console.log('Product = '+JSON.stringify(data));
+
           this.products = data;
         }
       )

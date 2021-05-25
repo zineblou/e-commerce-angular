@@ -9,6 +9,7 @@ import { ProductService } from './services/product.service';
 import { CategoryComponent } from './components/category/category.component';
 import { CatgoryServiceService } from './services/catgory-service.service';
 import { Route, RouterModule } from '@angular/router';
+import { Category } from './common/category';
 
 const routes:Route[] = [
 {path: 'category/:id', component: ProductListComponent},

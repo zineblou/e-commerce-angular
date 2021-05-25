@@ -1,4 +1,7 @@
 export class ProductCategory {
-    private id:number = 1;
-    private categoryName: string ="";
+    id: number =1;
+    categoryName: string ="" ;
+    constructor(){
+
+    }
 }
