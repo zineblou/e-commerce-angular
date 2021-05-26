@@ -11,14 +11,16 @@ import { CatgoryServiceService } from './services/catgory-service.service';
 import { Route, RouterModule } from '@angular/router';
 import { Category } from './common/category';
 import { SearchComponent } from './components/search/search.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 const routes:Route[] = [
 {path: 'search/:keyword', component: ProductListComponent},
+{path: 'product/:id', component: ProductDetailsComponent},
 {path: 'category/:id', component: ProductListComponent},
 {path: 'category', component: ProductListComponent},
 {path: 'products', component: ProductListComponent},
 {path: '', redirectTo:'/products', pathMatch:'full'},
-{path: '**', redirectTo:'/products', pathMatch: 'full'}
+{path: '**', redirectTo:'/products', pathMatch: 'full'},
 ]
 
 
@@ -27,7 +29,7 @@ const routes:Route[] = [
     AppComponent,
     ProductListComponent,
     CategoryComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

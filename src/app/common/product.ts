@@ -1,5 +1,5 @@
 export class Product {
-
+   id: number;
      sku: string;
 
     name: string;
@@ -18,6 +18,7 @@ export class Product {
 
     lastUpdated: Date;
  constructor(){
+    this.id = 0;
     this.sku = "";
 
     this.name= "";
