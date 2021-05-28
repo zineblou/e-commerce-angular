@@ -12,7 +12,7 @@ import { Route, RouterModule } from '@angular/router';
 import { Category } from './common/category';
 import { SearchComponent } from './components/search/search.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap'
 const routes:Route[] = [
 {path: 'search/:keyword', component: ProductListComponent},
 {path: 'product/:id', component: ProductDetailsComponent},
@@ -22,8 +22,6 @@ const routes:Route[] = [
 {path: '', redirectTo:'/products', pathMatch:'full'},
 {path: '**', redirectTo:'/products', pathMatch: 'full'},
 ]
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +32,8 @@ const routes:Route[] = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    NgbModule
   ],
   providers: [
     ProductService, 

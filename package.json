@@ -19,6 +19,7 @@
     "@angular/platform-browser-dynamic": "~12.0.0",
     "@angular/router": "~12.0.0",
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "@ng-bootstrap/ng-bootstrap": "^9.0.0",
     "bootstrap": "^5.0.1",
     "ngx-bootstrap": "^6.2.0",
     "rxjs": "~6.6.0",
@@ -26,9 +27,10 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1102.13",
+    "@angular-devkit/build-angular": "^0.901.15",
     "@angular/cli": "~12.0.0",
     "@angular/compiler-cli": "~12.0.0",
+    "@angular/localize": "^12.0.0",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "jasmine-core": "~3.7.0",

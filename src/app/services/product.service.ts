@@ -23,6 +23,11 @@ export class ProductService {
       map(response => response._embedded.products)
     );
   }
+  getProductListPaginate(thePage:number, thePageSize: number, categoryId: number) :Observable<GetReponse>{
+
+    const searchUrl:string = `${this.baseUrl}/search/findByCategoryId?id=${categoryId}&page=${thePage}&size=${thePageSize}`; 
+    return this.httpClient.get<GetReponse>(searchUrl);
+  }
 
   getCategoryList():Observable<ProductCategory[]> {
     
@@ -54,4 +59,10 @@ interface GetReponse{
   _embedded:{
     products: Product[];
   }
+  page: {
+    size: number,
+    totalElements: number,
+    totalPages: number,
+    number: number
+    }
 }
